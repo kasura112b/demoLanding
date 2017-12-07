@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    outline: 0 none;
+    font-family: 'Audiowide', cursive;
+}
+html {
+		max-height: 100%;
+		min-height:100%;
+		background: url('./assets/img/background.jpg') no-repeat;
+		background-size: cover;
+	}
+a {
+	text-decoration: none;
+}
+.header {
+	background-color: transparent;
+	height: 53px;
+	color: #000;
+}
+.header .wrapper-menu {
+	margin: 0 40px;
+}
+.header .wrapper-menu .nav {
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 53px;
+}
+.header .wrapper-menu .nav .nav-middle a {
+	margin: 0 30px;
+}
+.header .wrapper-menu .nav .item {
+	font-weight: 700;
+	font-size: 13px;
+	color: #000;
+}
+.container {
+	padding-top: 14vh;
+    text-align: center;
+}
+.container .wraper-content {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    width: 50%;
+    color: #a00303d4;
+}
+.container .wraper-content .content {
+    line-height: 50px;
+    padding: 10px 0;
+}
+.container .wraper-content .content p {
+    font-size: 24px;
+}
+.container .wraper-content .content a {
+    color: #ffffff;
+    background-color: #99999947;
+    font-weight: bold;
+}

@@ -12,9 +12,6 @@ export class AppHomePageComponent implements  OnInit {
     ngOnInit()  {
 
     }
-    onRouterGallery() {
-       // this.router.navigate(['/gallery']);
-    }
 }
 
 

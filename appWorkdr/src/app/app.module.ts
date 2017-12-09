@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { AppComponent } from './app.component';
 
+import { AppComponent } from './app.component';
 import { HomeModule } from './Home/home.module';
 import { environment } from '../environments/environment';
 import { AppHomePageComponent } from './Home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HomePageRouting  } from './app.routing.module';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -42,14 +43,13 @@ import {
   MatStepperModule,
 } from '@angular/material';
 @NgModule({
-  declarations: [
-    AppComponent,
-    AppHomePageComponent,
-  ],
+  declarations: [AppComponent, AppHomePageComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
+    environment.production
+      ? ServiceWorkerModule.register('/ngsw-worker.js')
+      : [],
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -81,11 +81,13 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatStepperModule,
-    HomeModule
+    HomeModule,
+    HomePageRouting,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 export class PizzaPartyAppModule { }
 export class MyOwnCustomMaterialModule { }
